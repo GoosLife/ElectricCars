@@ -1,0 +1,19 @@
+<table class="table table-bordered">
+    <thead class="thead-dark">
+        <tr>
+            <th>Rang</th>
+            <th>Model</th>
+            <th>Antal</th>
+            <th>Ændring (%)</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let car of eCars$ | async; let index = index">
+            <td>{{car.rank}}</td>
+            <td>{{car.model}}</td>
+            <td>{{car.quantity}}</td>
+            <td>{{car.changeQuantityPercent}}</td>
+        </tr>
+    </tbody>
+</table>
+<button (click)="addCar()">Click</button>
